@@ -81,12 +81,24 @@ namespace ConsoleApp7
             //3. BOOL CONVERSION
 
             //3.1 BOOL to CHAR
+            //char boolToCharImplict = hasFree2Pages; //IMPLICIT: NOT COMPILING
+            //char boolToCharExplict = (char)hasFree2Pages; //EXPLICIT: NOT COMPILING
+            char boolToCharUsingConverter = Convert.ToChar(hasFree2Pages); //System.InvalidCastException: 'Недопустимое приведение "Boolean" к "Char".'
 
             //3.2 BOOL to STRING
+            //string boolToStringImplict = hasFree2Pages; //IMPLICIT: NOT COMPILING
+            //string boolToStringExplict = (string)hasFree2Pages; //EXPLICIT: NOT COMPILING
+            string boolToStringUsingConverter = Convert.ToString(hasFree2Pages); //CONVERT INTO NULL
 
             //3.3 BOOL to DECIMAL
+            //decimal boolToDecimalImplict = hasFree2Pages; //IMPLICIT: NOT COMPILING
+            //decimal boolToDecimaExmplict = (decimal)hasFree2Pages; //EXPLICIT: NOT COMPILING
+            decimal boolToDecimalUsingConverter = Convert.ToDecimal(hasFree2Pages); //CONVERT INTO 0
 
             //3.4 BOOL to INT
+            //int boolToIntImplict = hasFree2Pages; //IMPLICIT: NOT COMPILING
+            //int boolToIntExplict = (int)hasFree2Pages; //EXPLICIT: NOT COMPILING
+            int boolToIntUsingConverter = Convert.ToInt32(hasFree2Pages); //CONVERT INTO 0
 
             //4. DECIMAL CONVERSION
 
