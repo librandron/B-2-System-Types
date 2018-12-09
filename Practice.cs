@@ -42,8 +42,8 @@ namespace ConsoleApp7
 
 
             //1.3 CHAR to DECIMAL
-            decimal charToDecimalImplict = place;       //IMPLICIT: CONVERT IN 51
-            decimal charToDecimalExplict = (decimal)place; //EXPLICIT: COMPILING BUT CONVERT INTO 0
+            decimal charToDecimalImplict = place;       //CONVERT INTO DECIMAL 51
+            decimal charToDecimalExplict = (decimal)place; //CONVERT INTO DECIMAL 51
            // decimal charToDecimalUsingConverter = Convert.ToDecimal(place); //System.InvalidCastException: 'Недопустимое приведение "Char" к "Decimal".'
 
 
@@ -89,7 +89,7 @@ namespace ConsoleApp7
             //3.2 BOOL to STRING
             //string boolToStringImplict = hasFree2Pages; //IMPLICIT: NOT COMPILING
             //string boolToStringExplict = (string)hasFree2Pages; //EXPLICIT: NOT COMPILING
-            string boolToStringUsingConverter = Convert.ToString(hasFree2Pages); //CONVERT INTO NULL
+            string boolToStringUsingConverter = Convert.ToString(hasFree2Pages); //CONVERT INTO NSTRING "FALSE"
 
             //3.3 BOOL to DECIMAL
             //decimal boolToDecimalImplict = hasFree2Pages; //IMPLICIT: NOT COMPILING
@@ -128,12 +128,27 @@ namespace ConsoleApp7
             //5. INT CONVERSION         
 
             //5.1 INT to CHAR
+            //char intToCharImplict = birthYear; //IMPLICIT: NOT COMPILING
+            char intToCharExplict = (char)birthYear; //CONVERT FROM INT 2000 INTO CHAR SYMBOL 'ߐ' UNOCODE 2000
+            char intToCharUsingConverter = Convert.ToChar(birthYear); //CONVERT FROM INT 2000 INTO CHAR SYMBOL 'ߐ' UNOCODE 2000
+
 
             //5.2 INT to BOOL
+            //bool intToBoolImplict = birthYear; //IMPLICIT: NOT COMPILING
+            //bool intToBoolExplict = (bool)birthYear; //EXPLICIT: NOT COMPILING
+            bool intToBoolUsingConverter = Convert.ToBoolean(birthYear); //CONVERT INTO BOOL TRUE
+
 
             //5.3 INT to DECIMAL
+            decimal intToDecimalImplict = birthYear; //CONVERT INTO DECIMAL 2000
+            decimal intToDecimalExplict = (decimal)birthYear; //CONVERT INTO DECIMAL 2000
+            decimal intToDecimalUsingConverter = Convert.ToDecimal(birthYear); //CONVERT INTO DECIMAL 2000
 
             //5.4 INT to STRING
+            //string intToStringImplict = birthYear; //IMPLICIT: NOT COMPILING
+            //string intToStringExplict = (string)birthYear; //EXPLICIT: NOT COMPILING
+            string intToStringUsingConverter = Convert.ToString(birthYear); //CONVERT INTO STRING "2000"
+
         }
     }
 }
