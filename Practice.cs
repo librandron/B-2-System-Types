@@ -18,6 +18,7 @@ namespace ConsoleApp7
             char hasFingerPrints = '0';
 
             bool hasFree2Pages = false;
+            decimal percent = 2.26598546988956M;
 
             double visaPrice = 60;
             double photoPrice = 7.5;
@@ -83,7 +84,7 @@ namespace ConsoleApp7
             //3.1 BOOL to CHAR
             //char boolToCharImplict = hasFree2Pages; //IMPLICIT: NOT COMPILING
             //char boolToCharExplict = (char)hasFree2Pages; //EXPLICIT: NOT COMPILING
-            char boolToCharUsingConverter = Convert.ToChar(hasFree2Pages); //System.InvalidCastException: 'Недопустимое приведение "Boolean" к "Char".'
+            //char boolToCharUsingConverter = Convert.ToChar(hasFree2Pages); //System.InvalidCastException: 'Недопустимое приведение "Boolean" к "Char".'
 
             //3.2 BOOL to STRING
             //string boolToStringImplict = hasFree2Pages; //IMPLICIT: NOT COMPILING
@@ -103,12 +104,26 @@ namespace ConsoleApp7
             //4. DECIMAL CONVERSION
 
             //4.1 DECIMAL to CHAR
+            //char decimalToCharImplict = percent; //IMPLICIT: NOT COMPILING
+            char decimalToCharExplict = (char)percent; //CONVERT FROM DECIMAL 2.26598546988956M INTO CHAR 2'/u0002' 
+            //char decimalToCharUsingConverter = Convert.ToChar(percent);//System.InvalidCastException: 'Недопустимое приведение "Decimal" к "Char".'
+
 
             //4.2 DECIMAL to BOOL
+            //ool decimalToBoolImplict = percent; //IMPLICIT: NOT COMPILING
+            //bool decimalToBoolExplict = (bool)percent; //EXPLICIT: NOT COMPILING
+            bool decimalToBoolUsingConverter = Convert.ToBoolean(percent); //CONVERT INTO BOOL TRUE
 
             //4.3 DECIMAL to STRING
+            //string decimalToStringImplict = percent; //IMPLICIT: NOT COMPILING
+            //string decimalToStringExplict = (string)percent; //EXPLICIT: NOT COMPILING
+            string decimalToStringUsingConverter = Convert.ToString(percent); //CONVERT FROM DECIMAL 2.26598546988956M INTO STRING "2.26598546988956"
+
 
             //4.4 DECIMAL to INT
+            //int decimalToIntImplict = percent; //IMPLICIT: NOT COMPILING
+            int decimalToIntExplict = (int)percent; //CONVERT FROM DECIMAL 2.26598546988956M INTO INT 2
+            int decimalToIntUsingConverter = Convert.ToInt32(percent); //CONVERT FROM DECIMAL 2.26598546988956M INTO INT 2
 
             //5. INT CONVERSION         
 
