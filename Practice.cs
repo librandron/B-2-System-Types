@@ -24,6 +24,9 @@ namespace ConsoleApp7
 
             int birthYear = 2000;
 
+            //int testName = 12;
+
+
             //1. CHAR CONVERSION 
             //1.1 CHAR to STRING
 
